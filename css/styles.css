@@ -1,0 +1,237 @@
+/* Reset default margin and padding */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Make sure the body takes up the full height of the viewport */
+}
+
+/* Background image container */
+.background-image {
+    background-image: url(../images/image.jpg);
+    /* Path to your image */
+    background-size: cover;
+    /* Cover the entire page */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    position: fixed;
+    /* Fix the image in place */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Place it behind other content */
+}
+
+.background-video {
+    background: url('../videos/RickBack.mp4') repeat center center fixed;
+    /* Path to your video file */
+    background-size: cover;
+    background-attachment: fixed;
+    /* Ensures the video stays in place while scrolling */
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Place it behind other content */
+}
+
+/* Content container */
+.content-box {
+    width: 70%;
+    /* Adjust the width as needed */
+    max-width: 1200px;
+    /* Optional: Set a maximum width */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent black */
+    color: white;
+    /* White text (for contrast) */
+    padding: 20px;
+    /* Space inside the box */
+    margin: 0 auto;
+    /* Center the box horizontally */
+    position: relative;
+    /* Ensure it stays above the background */
+    z-index: 1;
+    /* Place it above the background image */
+    overflow-y: auto;
+    /* Allow scrolling inside the box */
+    height: 100vh;
+    /* Full height */
+    display: flex;
+    /* Flexbox for centering content */
+    flex-direction: column;
+    /*align-items: center;
+    justify-content: center;*/
+}
+
+
+/* TV container positioning inside the content-box */
+.tv-container {
+    position: relative;
+    /* Changed from fixed to relative */
+    bottom: 0;
+    /* Adjust as needed */
+    left: 0;
+    /* Adjust as needed */
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.0);
+    margin-top: 20px;
+    /* Add some space between the title and the TV */
+}
+
+/* Individual TV item */
+/* Individual TV item */
+.tv-item {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    /* Adjust as needed */
+    max-width: 300px;
+    /* Maximum width */
+    height: auto;
+    /* Adjust height automatically */
+    aspect-ratio: 16 / 9;
+    /* Maintain aspect ratio (e.g., 16:9 for widescreen) */
+}
+
+/* Video behind the image (covers the entire container) */
+.tv-video {
+    position: relative;
+    left: 40px;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the video covers the whole container */
+    z-index: 1;
+}
+
+/* Image (TV cover) placed on top of the video */
+.tv-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the whole container */
+    z-index: 2;
+    /* Make sure the image is above the video */
+}
+
+
+
+.title-box {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0px;
+    border-bottom: 2px solid yellow;
+    /* Straight bottom border */
+    text-align: center;
+    min-height: 40px;
+    display: block;
+}
+
+/* Title Box for Rick Owens Image */
+.title-box-rick {
+    width: 100%;
+    height: 8vh;
+    /* 20% of the viewport height */
+    background-color: rgba(255, 255, 255, 1);
+    padding: 2px;
+    text-align: center;
+    min-height: 5%;
+    display: block;
+}
+
+/* Make the image inside the title box cover only 100% width and 100% height of the box */
+.title-box-rick img {
+    width: auto;
+    height: 100%;
+    /* Ensure the image fits the height of the title box */
+    object-fit: contain;
+    /* Keeps the aspect ratio intact */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-box {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .title-box {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+
+/* Bottom Section for Rick Owens Page */
+.bottom-section-rick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%; /* Increase this value to add more space between the boxes */
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Individual Rectangles */
+.rectangle-rick {
+    width: 35%;
+    /* Adjust width */
+    height: 600px;
+    /* Adjust height */
+    background-color: rgb(255, 255, 255);
+    /* Light transparent white */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    /* Prevent overflow issues */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image inside rectangle */
+.rectangle-rick img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image covers the rectangle */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Text inside rectangle */
+.rectangle-rick .text-rick {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+}
+
+/* Hover Effect - Image slides left, Text fades in */
+.rectangle-rick:hover img {
+    transform: translateY(+100%);
+}
+
+.rectangle-rick:hover .text-rick {
+    opacity: 1;
+}
