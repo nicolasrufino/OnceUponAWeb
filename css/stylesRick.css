@@ -1,0 +1,134 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Styles */
+.rick-title {
+    text-align: center;
+    padding: 10px;
+    background: white;
+}
+
+.rick-title img {
+    height: 60px;
+    width: auto;
+}
+
+/* Grid Layout */
+.rick-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 45px 10px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+/* Individual Items */
+.rick-item {
+    width: 450px;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* Image Container */
+.rick-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rick-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Text Overlay */
+.rick-text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white ;
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Typography */
+.rick-title-text {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.rick-text-container p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Hover Effects */
+.rick-item:hover .rick-img {
+    transform: translateY(-100%);
+}
+
+.rick-item:hover .rick-text-container {
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .rick-grid {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .rick-item {
+        width: 100%;
+        height: 400px;
+    }
+
+    .rick-title-text {
+        font-size: 22px;
+    }
+
+    .rick-text-container p {
+        font-size: 14px;
+    }
+}
