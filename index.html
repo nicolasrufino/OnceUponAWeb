@@ -7,12 +7,10 @@
     <title>THRASHER - TOPIN</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <audio autoplay loop>
     <source src="audios/A Tribe Called Quest - Jazz (We've Got) Buggin' Out (Official HD Video).mp3" type="audio/mpeg">
-
 </audio>
-
-<!-- Rest of your page content -->
 
 <body>
     <div class="background-image"></div>
@@ -20,14 +18,32 @@
         <div class="title-box">
             <img src="images/thrasherr.png" alt="Thrasher Logo">
         </div>
+
         <br>
-        <div class="tv-container">
-            <div class="tv-item">
-                <video autoplay muted loop class="tv-video">
-                    <source src="videos/mid90sCrop.mp4" type="video/mp4">
-                </video>
-                <img src="images/tvCover1.png" class="tv-cover" alt="TV Cover">
+
+        <!-- Flex container for TV and the magazine text -->
+        <div class="main-content">
+            <!-- TV Container -->
+            <div class="tv-container">
+                <div class="tv-item">
+                    <video class="tv-video" autoplay loop muted>
+                        <source src="videos/mid90sCrop.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="images/tvCover1.png" class="tv-cover" alt="TV Cover">
+                </div>
             </div>
+
+            <!-- Magazine Text Container -->
+            <div class="magazine-text">
+                <p>
+                    The 90s were chaos—neon, plaid, and skateboards screeching on pavement. Thrasher wasn’t just a magazine; it was a manifesto. Skate culture screamed, “Be bold, be wild, be yourself.” Identity wasn’t overthought—it was lived. Wear what you want, skate where you want, and never apologize.
+                </p>
+            </div>
+        </div>
+
+        <div class="center-link-container">
+            <a href="rickOwens.html" class="click-here-link-new">Click Here NOW !!!</a>
         </div>
     </div>
 </body>
