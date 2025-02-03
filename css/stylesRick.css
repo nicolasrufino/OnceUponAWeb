@@ -7,6 +7,18 @@ body, html {
     font-family: 'Arial', sans-serif;
 }
 
+.background-color {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Behind all other content */
+  }
+
 /* Background Video */
 .background-video {
     position: fixed;
