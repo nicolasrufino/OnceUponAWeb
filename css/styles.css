@@ -65,14 +65,14 @@ body, html {
   .tv-item {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     aspect-ratio: 16 / 9; /* Maintains 16:9 ratio */
   }
   
   /* Video Styling */
   .tv-video {
     position: relative;
-    left: 40px;
+    left: 50px;
     width: 60%;
     height: 100%;
     object-fit: cover;
