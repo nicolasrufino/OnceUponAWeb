@@ -5,7 +5,6 @@ body, html {
   overflow-x: hidden;
 }
 
-/* Background Image (full screen, fixed behind content) */
 .background-image {
   background-image: url(../images/image.jpg);
   background-size: cover;
@@ -15,10 +14,9 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Behind all other content */
+  z-index: -1; 
 }
 
-/* Content Box (main container for all page content) */
 .content-box {
   width: 70%;
   max-width: 1200px;
@@ -33,11 +31,10 @@ body, html {
   flex-direction: column;
 }
 
-/* Title Box (holds the logo and bottom border) */
 .title-box {
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid yellow; /* Underline effect for the logo */
+  border-bottom: 2px solid yellow; 
 }
 
 .inverted-text-container {
@@ -75,31 +72,28 @@ body, html {
   width: auto;
 }
 
-/* Main Content (video & magazine text side-by-side) */
 .main-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 60px;
-  padding: 0 5%; /* Side padding for balance */
+  padding: 0 5%; 
 }
 
-/* TV Container (holds the video element) */
 .tv-container {
   flex: 1;
   max-width: 48%;
   margin-left: 3%;
 }
 
-/* TV Item (container for video and its overlay cover) */
+
 .tv-item {
   position: relative;
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 16 / 9; /* Maintains 16:9 ratio */
+  aspect-ratio: 16 / 9;
 }
 
-/* Video Styling */
 .tv-video {
   position: relative;
   left: 50px;
@@ -109,7 +103,6 @@ body, html {
   z-index: 0;
 }
 
-/* Video Cover Image (placed on top of video) */
 .tv-cover {
   position: absolute;
   top: 0;
@@ -120,7 +113,6 @@ body, html {
   z-index: 2;
 }
 
-/* Magazine Text Container (styled text area with a gradient background) */
 .magazine-text-container {
   flex: 1;
   max-width: 100%;
@@ -143,7 +135,6 @@ body, html {
   text-align: right;
 }
 
-/* Magazine Text (text styling for a 90s magazine look) */
 .magazine-text {
   font-size: 20px;
   font-weight: 600;
@@ -153,7 +144,6 @@ body, html {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Inverted Section (layout for text on left, image on right) */
 .inverted-section {
   display: flex;
   align-items: center;
@@ -163,7 +153,7 @@ body, html {
   gap: 40px;
 }
 
-/* Inverted Image Container (right side of inverted section) */
+
 .inverted-image-container {
   flex: 1;
   max-width: 45%;
@@ -176,7 +166,7 @@ body, html {
   object-fit: contain;
 }
 
-/* Rick Owens Link (styled call-to-action link) */
+
 .rick-owens-link {
   text-align: center;
   margin-top: 50px;
@@ -198,17 +188,16 @@ body, html {
   color: #000;
 }
 
-/* Overlay Image (positioned on top of all content) */
+
 .overlay-image {
   position: absolute;
   top: 90px;
   left: 40px;
   z-index: 9999;
   width: 250px;
-  pointer-events: none; /* Allows clicks to pass through */
+  pointer-events: none; 
 }
 
-/* Responsive Design (for screens under 768px wide) */
 @media (max-width: 768px) {
   .content-box {
       width: 90%;
